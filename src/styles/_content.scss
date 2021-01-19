@@ -1,5 +1,6 @@
 #about,
-#education {
+#education,
+#experience {
   font-size: 120%;
 
   width: 90%;
@@ -11,6 +12,25 @@
   svg {
     width: 60px !important;
     height: auto;
+  }
+}
+
+#experience {
+  .job-title {
+    strong {
+      font-weight: bold;
+    }
+
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    font-weight: 400;
+    margin-bottom: 0.1em;
+    padding-bottom: 0.1em;
+  }
+
+  .job-date {
+    margin-top: 0em;
+    padding-top: 0em;
   }
 }
 
