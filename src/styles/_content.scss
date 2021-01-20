@@ -9,9 +9,11 @@
   @media only screen and (min-width: $cut) {
     width: 80%;
   }
-  svg {
+  svg,
+  img {
     width: 60px !important;
     height: auto;
+    font-size: 10%;
   }
 }
 
@@ -40,8 +42,16 @@
   }
 }
 
+#about {
+  h1 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
 .tech {
   margin: 10px;
+  margin-top: 0;
   flex: 1 1 0;
   h2,
   h3 {
