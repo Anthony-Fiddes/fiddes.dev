@@ -7,7 +7,7 @@ description: Resume
 # User settings
 username: Anthony Fiddes
 user_title: Software Engineer
-email: anthony@fiddes.dev
+email: afiddes.subs@gmail.com
 github_username: Anthony-Fiddes
 
 exclude: ['package.json', 'src', 'node_modules']
