@@ -1,5 +1,5 @@
 ---
-title: "Running Linux on the Thinkpad Z13"
+title: "Running Linux on my Thinkpad Z13"
 date: 2023-07-24T21:15:19-07:00
 draft: true
 ---
