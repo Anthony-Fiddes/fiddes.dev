@@ -1,7 +1,7 @@
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "fiddes.dev/blog"
+title = "fiddes.dev"
 
 [params]
   displayName = "EN"
