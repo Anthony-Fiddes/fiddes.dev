@@ -3,7 +3,7 @@
 # https://blowfish.page/docs/getting-started/
 
 theme = "blowfish"
-baseURL = "https://fiddes.dev/blog/"
+baseURL = "https://fiddes.dev/"
 languageCode = "en"
 defaultContentLanguage = "en"
 
