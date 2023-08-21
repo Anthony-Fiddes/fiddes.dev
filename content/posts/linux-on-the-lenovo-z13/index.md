@@ -52,3 +52,15 @@ One note: the fingerprint sensor on the Z13 is not as fast as the one you might
 have on your phone. You'll want to hold your finger to the sensor a bit longer
 in order for it to successfully read your fingerprint consistently.
 
+## Helpful Resources
+
+### Audio Problems
+
+Sometimes I found that no sound would come from my Z13's speakers. The f1/2/3
+audio buttons also wouldn't work. Basically the system behaved as if it had no
+speakers. For this issue, I found
+[this](https://support.system76.com/articles/audio/) article by System76 to be
+pretty helpful. What I did to improve my issue was:
+
+- I reinstalled/restarted pipewire per the instructions in the article above.
+- I disabled hibernation/fast startup/secure boot.
