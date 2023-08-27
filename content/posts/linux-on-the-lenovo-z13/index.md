@@ -29,6 +29,47 @@ sudo apt install oem-sutton.newell-abe-meta
 If you want to be able to adjust the force touchpad settings (you probably do)
 download Lenovo's janky-but-functional tool [here](https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-z-series-laptops/thinkpad-z13-type-21d2-21d3/downloads/ds561548-elan-haptic-pad-settings-tool-for-linux-thinkpad-z13-gen-1-z16-gen-1).
 
+## Sleep Issues
+
+I had the same problems that others online experienced when it came to the
+Wi-Fi adapter being slow after waking up from sleep.
+
+I tried a bunch of other methods (toggling the Wi-Fi off/on upon waking from
+sleep, changing the power-saving settings in NetworkManager, etc.) but this is
+what ultimately ended up working for me:
+
+```bash
+#!/bin/sh
+# save to /lib/systemd/system-sleep/ 
+
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+
+case "$1" in
+	#code execution BEFORE sleeping/hibernating/suspending
+	pre)
+		xinput set-prop "ELAN06A0:00 04F3:3231 Touchpad" "Device Enabled" 0
+	;;
+	#code execution AFTER resuming
+	post)
+		# Fix wifi speeds by reloading module
+		sudo modprobe -r ath11k_pci && sudo modprobe ath11k_pci
+		# Toggle touchpad to make two finger right clicks more reliable
+		xinput set-prop "ELAN06A0:00 04F3:3231 Touchpad" "Device Enabled" 1
+	;;
+esac
+
+exit 0
+```
+
+I got the idea from [this
+post](https://blog.15cm.net/2022/08/21/my_arch_linux_setup_on_thinkpad_z13_gen_1/#touchpad-bad)
+that mentioned deleting and reinserting the `ath11k_pci` kernel module using
+`systemd-suspend-modules` on Arch. The above works fine for me on pop_os.
+
+As you can see, I also found that restarting the touchpad made it a little bit
+more reliable when it came to palm rejection and tap-to-click (although this
+could be purely placebo).
+
 ## Fingerprint Sensor
 
 ```bash
