@@ -1,12 +1,16 @@
 ---
 title: "Running Linux on my Thinkpad Z13"
 date: 2023-07-24T21:15:19-07:00
-draft: true
+draft: false
 ---
 
-This is basically just a walk-through of my install script for the Lenovo Z13
-Thinkpad. I'm using pop_os!, but the commands/ideas should work for any Debian
-based distro.
+This is basically just a walk-through of my [install
+script](https://github.com/Anthony-Fiddes/dotfiles/blob/main/hw_specific/lenovo_z13/install.fish)
+for the Lenovo Z13 Thinkpad. I'm using pop_os!, but the commands/ideas should
+work for any Debian based distro.
+
+I'll periodically come back to update this page with any new findings specific
+to running Linux on my Z13.
 
 ## Basics
 
