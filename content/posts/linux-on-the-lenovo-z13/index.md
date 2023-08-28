@@ -102,10 +102,14 @@ in order for it to successfully read your fingerprint consistently.
 ### Audio Problems
 
 Sometimes I found that no sound would come from my Z13's speakers. The f1/2/3
-audio buttons also wouldn't work. Basically the system behaved as if it had no
-speakers. For this issue, I found
-[this](https://support.system76.com/articles/audio/) article by System76 to be
-pretty helpful. What I did to improve my issue was:
+audio buttons also wouldn't work and the system behaved as if it had no
+speakers connected. [This](https://support.system76.com/articles/audio/)
+article by System76 was pretty helpful for troubleshooting. What I did to
+improve my issue was:
 
 - I reinstalled/restarted pipewire per the instructions in the article above.
-- I disabled hibernation/fast startup/secure boot.
+- I disabled hibernation/fast startup/secure boot on my Windows install and
+  bios.
+
+I'm not sure which solved the problem, but it's not happening anymore so I'm
+happy.
