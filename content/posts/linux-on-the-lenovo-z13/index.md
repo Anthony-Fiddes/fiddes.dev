@@ -35,6 +35,17 @@ download Lenovo's janky-but-functional tool [here](https://pcsupport.lenovo.com/
 
 ## Sleep Issues
 
+> 2023-09-17 Update:
+> 
+> I didn't change anything, but I've noticed that wake from
+> sleep times have substantially improved (from a noticeable couple of seconds to
+> near instant upon opening the lid).
+> 
+> I experimented further by removing the modprobe line from the following sleep
+> script and I noticed that it's no longer needed for my Wi-Fi to be performant
+> after sleep. I assume this came for free with some kernel/system updates, but
+> I'm leaving the section below in case it's still helpful on some environments.
+
 I had the same problems that others online experienced when it came to the
 Wi-Fi adapter being slow after waking up from sleep.
 
