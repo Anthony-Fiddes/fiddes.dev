@@ -6,11 +6,13 @@ title: "Anthony Fiddes"
   p, li {font-size: 1.3rem};
 </style>
 
-# Experience
+<!-- TODO: Do I want to add pictures? -->
+
+<!-- TODO: Fill in the last two jobs -->
 
 <h2 style="margin-bottom: 0">Emory University | Computer Science B. A.</h2>
 
-May 2022, 3.8 GPA
+May 2022, 3.8 GPA, [Degree](./diploma.pdf)
 
 <h2 style="margin-bottom: 0">Snap Inc., California | Software Engineer</h2>
 
@@ -23,7 +25,7 @@ May 2021 - August 2021
 Worked on an internal fork of Apache Atlas as part of Snap’s Data Mesh Catalog
 team to improve the company's data governance model.
 
-• Implemented BigQuery logging that allowed our team to easily monitor our data
+* Implemented BigQuery logging that allowed our team to easily monitor our data
 ingest. I used this feature to generate statistical reports that pointed out
 unexpected bugs.
 
@@ -59,16 +61,4 @@ Served as part of Google's Computer Science Summer Institute. CSSI is a
 community facing program that introduces underrepresented high school students
 to software engineering.
 
-# Skills
-Code
-Go  
-I mainly use Go and Python in my personal projects, and a lot of my professional and class work has been in Java.
-
-Web
-React Google Cloud Platform Firebase
-I've deployed web and mobile applications using tools like React, Google Cloud Platform, and Firebase (to name a few).
-
-Tools
-  Tux
-I'm always learning new tools to get the job done. Git, npm, and Linux are some of the most popular tools I use regularly.
-
+<!-- TODO: Do I want a skills section? -->
