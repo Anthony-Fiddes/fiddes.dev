@@ -18,7 +18,7 @@ May 2022, 3.8 GPA, [Degree](./diploma.pdf)
 
 June 2022 - Now
 
-Returned to the Data Mesh Catalog (DMC) team to become the authoritative source of
+Returned to the Data Mesh Catalog (DMC) team to become the authoritative source of 
 information for everything DMC. I am responsible for:
 
 * Developing new features on both the frontend (using React and Typescript) and
