@@ -14,7 +14,7 @@ title: "Anthony Fiddes"
 
 May 2022, 3.8 GPA, [Degree](./diploma.pdf)
 
-<h2 style="margin-bottom: 0">Snap Inc., California | Software Engineer</h2>
+<h2 style="margin-bottom: 0">Snap Inc., San Francisco | Software Engineer</h2>
 
 June 2022 - Now
 
