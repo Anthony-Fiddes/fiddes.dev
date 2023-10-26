@@ -38,10 +38,6 @@ May 2021 - August 2021
 Worked on an internal fork of Apache Atlas as part of Snap’s Data Mesh Catalog
 team to improve the company's data governance model.
 
-* Implemented BigQuery logging that allowed our team to easily monitor our data
-ingest. I used this feature to generate statistical reports that pointed out
-unexpected bugs.
-
 <h2 style="margin-bottom: 0">Google, Remote | Student Training in Engineering Program Intern</h2>
 
 May 2020 - August 2020
