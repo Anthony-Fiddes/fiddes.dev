@@ -18,6 +18,19 @@ May 2022, 3.8 GPA, [Degree](./diploma.pdf)
 
 June 2022 - Now
 
+Returned to the Data Mesh Catalog (DMC) team to become the authoritative source of
+information for everything DMC. I am responsible for:
+
+* Developing new features on both the frontend (using React and Typescript) and
+the backend (using Java, Python, and SQL).
+* Creating pipelines to catalog metadata, primarily using Apache Airflow,
+BigQuery, and Spanner.
+* Maintaining and monitoring our services using Grafana, Kubernetes, Docker,
+Jenkins, and other tools.
+* Providing excellent and timely customer support.
+* Onboarding new hires to the project.
+
+
 <h2 style="margin-bottom: 0">Snap Inc., Remote | Software Engineering Intern</h2>
 
 May 2021 - August 2021
