@@ -15,6 +15,18 @@
  pageRef = "posts"
  weight = 10
 
+[[main]]
+  identifier = "github"
+  pre = "github"
+  url = "https://github.com/Anthony-Fiddes"
+  weight = 20
+
+[[main]]
+  identifier = "linkedin"
+  pre = "linkedin"
+  url = "https://www.linkedin.com/in/anthony-fiddes-306114149/"
+  weight = 30
+
 #[[main]]
 #  name = "Parent"
 #  weight = 20
