@@ -1,10 +1,10 @@
 ---
 title: "Anthony Fiddes"
+description: "Resúme"
+lastmod: 2023-10-31
 ---
 
-<style>
-  p, li {font-size: 1.3rem};
-</style>
+<!-- TODO: Add a line to the page to show when it was last updated. -->
 
 <!-- TODO: Do I want to add pictures? -->
 
@@ -29,6 +29,12 @@ BigQuery, and Spanner.
 Jenkins, and other tools.
 * Providing excellent and timely customer support.
 * Onboarding new hires to the project.
+
+Our team is also spearheading the effort to make BigQuery a tier 1 service at
+Snap. This means that we:
+* Save millions of dollars per year by identifying unused resources for
+deletion.
+* Monitor query cost and performance with Grafana dashboards.
 
 
 <h2 style="margin-bottom: 0">Snap Inc., Remote | Software Engineering Intern</h2>
@@ -71,3 +77,7 @@ community facing program that introduces underrepresented high school students
 to software engineering.
 
 <!-- TODO: Do I want a skills section? -->
+
+<style>
+  p, li {font-size: 1.3rem};
+</style>
