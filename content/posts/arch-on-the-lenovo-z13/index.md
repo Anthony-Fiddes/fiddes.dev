@@ -142,5 +142,15 @@ life is great on Power Saver (e.g. as I write this at 86% I have an estimated 8 
 left with the keyboard backlight on low, 27 tabs open in brave and 4 tabs open
 in Kitty).
 
+To get mDNS working (the feature that enables you to go to a host-name.local
+service you may be running on your LAN), I had to open the firewall application
+and assign my network to the "home" zone, where mDNS is enabled by default. I
+figured this out while browsing [this Endeavour OS wiki
+page](https://discovery.endeavouros.com/applications/firewalld/).
+
+Example:
+
+![firewall application example](./firewall_screenshot.png)
+
 [^2]: One of the most helpful posts I looked at:
 [https://blog.15cm.net/2022/08/21/my_arch_linux_setup_on_thinkpad_z13_gen_1/](https://blog.15cm.net/2022/08/21/my_arch_linux_setup_on_thinkpad_z13_gen_1/)
