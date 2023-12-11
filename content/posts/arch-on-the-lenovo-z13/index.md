@@ -122,6 +122,8 @@ There is one caveat to note: `system-auth` is included in a ton of other places,
 so this may not be the most secure option, but I think I'm fine with allowing
 most situations to be authorized using my fingerprint when possible.
 
+[^1]: https://wiki.archlinux.org/title/Fprint
+
 ### Debugging Tip
 
 One factor that confused my debugging process was the fact that my keyring
@@ -129,9 +131,9 @@ password was set to the password I used to encrypt my disk. I'm not sure if I
 did that or the installer did, but I initially thought that this behavior was
 another symptom of triggering the lockout. I ended up installing seahorse (`yay
 -S seahorse`) to change the password on my keyring to what I expected it to be
-(the same as my login password set via `passwd`).
-
-[^1]: https://wiki.archlinux.org/title/Fprint
+(the same as my login password set via `passwd`). This works until I restart,
+and then it's set back to my LUKS password. Not sure how to change this but I don't
+mind it I guess.
 
 ## Misc
 
@@ -143,14 +145,22 @@ left with the keyboard backlight on low, 27 tabs open in brave and 4 tabs open
 in Kitty).
 
 To get mDNS working (the feature that enables you to go to a host-name.local
-service you may be running on your LAN), I had to open the firewall application
-and assign my network to the "home" zone, where mDNS is enabled by default. I
-figured this out while browsing [this Endeavour OS wiki
-page](https://discovery.endeavouros.com/applications/firewalld/).
+service you may be running on your LAN), I had to:
 
-Example:
+1. Open the firewall application
+   and assign my network to the "home" zone, where mDNS is enabled by default. I
+   figured this out while browsing [this Endeavour OS wiki
+   page](https://discovery.endeavouros.com/applications/firewalld/).
+   
+   Example:
+   
+   ![firewall application example](./firewall_screenshot.png)
 
-![firewall application example](./firewall_screenshot.png)
+2. Enable a daemon that provides mDNS. I used Avahi, so I followed the
+   instructions [here](https://wiki.archlinux.org/title/Avahi). You should also
+   be able to use resolved following the instructions
+   [here](https://wiki.archlinux.org/title/Systemd-resolved#mDNS) (it just
+   seemed like more work).
 
 [^2]: One of the most helpful posts I looked at:
 [https://blog.15cm.net/2022/08/21/my_arch_linux_setup_on_thinkpad_z13_gen_1/](https://blog.15cm.net/2022/08/21/my_arch_linux_setup_on_thinkpad_z13_gen_1/)
