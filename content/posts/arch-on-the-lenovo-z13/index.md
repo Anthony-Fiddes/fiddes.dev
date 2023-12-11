@@ -18,7 +18,7 @@ this time around is very similar to the last one I posted.
 
 I copied this script:
 
-```
+```bash
 #!/bin/sh
 
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
@@ -64,7 +64,7 @@ was extremely helpful as always.
 For my first attempt to get fingerprint auth working with sudo, my `/etc/pam.d/sudo`
 looked like this:
 
-```
+```bash
 #%PAM-1.0
 auth	  	sufficient 	pam_fprintd.so # addded line
 auth		include		system-auth
@@ -81,7 +81,7 @@ commands for 15 minutes each time. Super annoying.
 Reading just a little further down on the page, I removed the above edit and
 instead edited `/etc/pam.d/system-auth` like so:
 
-```
+```bash
 #%PAM-1.0
 
 # deny=10 because the default of 3 is constantly getting me locked out
