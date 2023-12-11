@@ -89,8 +89,8 @@ auth       required                    pam_faillock.so      preauth deny=10
 # Optionally use requisite above if you do not want to prompt for the password
 # on locked accounts.
 -auth      [success=3 default=ignore]  pam_systemd_home.so  try_first_pass nullok likeauth
-auth       [success=2 default=bad]     pam_unix.so          try_first_pass nullok likeauth
-auth       [success=1 default=ignore]  pam_fprintd.so
+auth       [success=2 default=ignore]  pam_unix.so          try_first_pass nullok likeauth
+auth       [success=1 default=bad]     pam_fprintd.so
 auth       [default=die]               pam_faillock.so      authfail
 auth       optional                    pam_permit.so
 auth       required                    pam_env.so
