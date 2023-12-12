@@ -171,7 +171,8 @@ service you may be running on your LAN), I had to:
 
 ### Brave & Wayland
 
-If you're using `brave-bin` from the AUR, then you can add any Brave flags you
+If you're using `brave-bin` from the AUR, then you can add any Brave
+flags[^brave_flags] you
 want to use permanently to `$XDG_CONFIG_HOME/brave-flags.conf`. Here's what I
 use to make Brave use Wayland and allow the two-finger swipe gesture to go back
 and forth in history.
@@ -183,5 +184,9 @@ and forth in history.
 --ozone-platform=wayland
 ```
 
-The ozone-platform setting makes the title bar weirdly smaller, but that's the
-only downside I've noticed.
+The ozone-platform setting makes the title bar weirdly smaller and the text
+sizing doesn't really work, but those are the only downsides I've noticed. I
+just changed the default zoom and other Gnome settings to get the look I wanted.
+
+[^brave_flags]: The Chromium page of the Arch wiki was extremely helpful here:
+https://wiki.archlinux.org/title/Chromium
