@@ -184,9 +184,8 @@ and forth in history.
 --ozone-platform=wayland
 ```
 
-The ozone-platform setting makes the title bar weirdly smaller and the text
-sizing doesn't really work, but those are the only downsides I've noticed. I
-just changed the default zoom and other Gnome settings to get the look I wanted.
+The ozone-platform setting makes the title bar weirdly smaller, but that's the
+only downside I've noticed.
 
 [^brave_flags]: The Chromium page of the Arch wiki was extremely helpful here:
 https://wiki.archlinux.org/title/Chromium
