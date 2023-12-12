@@ -137,12 +137,16 @@ mind it I guess.
 
 ## Misc
 
+### auto-cpufreq
+
 This post[^2] mentioned using auto-cpufreq, but it didn't work for me. For some
 reason when I had it enabled the trackpoint would register random right clicks
 when the laptop was docked. I'm just using Gnome power profiles now and battery
 life is great on Power Saver (e.g. as I write this at 86% I have an estimated 8 hours
 left with the keyboard backlight on low, 27 tabs open in brave and 4 tabs open
 in Kitty).
+
+### mDNS
 
 To get mDNS working (the feature that enables you to go to a host-name.local
 service you may be running on your LAN), I had to:
@@ -164,3 +168,20 @@ service you may be running on your LAN), I had to:
 
 [^2]: One of the most helpful posts I looked at:
 [https://blog.15cm.net/2022/08/21/my_arch_linux_setup_on_thinkpad_z13_gen_1/](https://blog.15cm.net/2022/08/21/my_arch_linux_setup_on_thinkpad_z13_gen_1/)
+
+### Brave & Wayland
+
+If you're using `brave-bin` from the AUR, then you can add any Brave flags you
+want to use permanently to `$XDG_CONFIG_HOME/brave-flags.conf`. Here's what I
+use to make Brave use Wayland and allow the two-finger swipe gesture to go back
+and forth in history.
+
+```bash
+--gtk-version=4
+--ozone-platform-hint=auto 
+--enable-features=TouchpadOverscrollHistoryNavigation
+--ozone-platform=wayland
+```
+
+The ozone-platform setting makes the title bar weirdly smaller, but that's the
+only downside I've noticed.
