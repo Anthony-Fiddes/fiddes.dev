@@ -43,8 +43,8 @@ before was overkill since the problem was also solved by just toggling the Wi-Fi
 on and off.
 
 [^3]: The [Arch
-Wiki](https://wiki.archlinux.org/title/Power_management#Sleep_hooks) says to use
-`/usr/lib/systemd/system-sleep/`, but this
+Wiki](https://wiki.archlinux.org/title/Power_management#Hooks_in_/usr/lib/systemd/system-sleep)
+says to use `/usr/lib/systemd/system-sleep/`, but this
 [AskUbuntu](https://askubuntu.com/questions/1313479/correct-way-to-execute-a-script-on-resume-from-suspend)
 post used `/lib/systemd/system-sleep`. Since I'm using Arch I'm going with the
 Arch wiki, but it seems like either would work (and I definitely used the
