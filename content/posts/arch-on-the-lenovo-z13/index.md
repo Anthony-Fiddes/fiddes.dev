@@ -2,6 +2,8 @@
 title: "Running Linux on my Thinkpad Z13 Part 2: Arch"
 summary: "I distro hopped to Arch because I was curious about the rolling
 release experience."
+description: "I distro hopped to Arch because I was curious about the rolling
+release experience."
 date: 2023-12-09T19:17:19-07:00
 draft: false
 ---
@@ -28,10 +30,12 @@ PATH=/sbin:/usr/sbin:/bin:/usr/bin
 case "$1" in
 	#code execution BEFORE sleeping/hibernating/suspending
 	pre)
+		echo "Turning off Wi-Fi"
 		rfkill block wlan
 	;;
 	#code execution AFTER resuming
 	post)
+		echo "Turning Wi-Fi back on"
 		rfkill unblock wlan
 	;;
 esac

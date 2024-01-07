@@ -1,14 +1,12 @@
 ---
 title: "Anthony Fiddes"
-description: "Resúme"
+description: "My Software Engineer resumé and some blog posts."
 lastmod: 2023-10-31
 ---
 
 <!-- TODO: Add a line to the page to show when it was last updated. -->
 
 <!-- TODO: Do I want to add pictures? -->
-
-<!-- TODO: Fill in the last two jobs -->
 
 <h2 style="margin-bottom: 0">Emory University | Computer Science B. A.</h2>
 
@@ -18,7 +16,7 @@ May 2022, 3.8 GPA, [Degree](./diploma.pdf)
 
 June 2022 - Now
 
-Returned to the Data Mesh Catalog (DMC) team to become the authoritative source of 
+Returned to the Data Mesh Catalog (DMC) team to become the authoritative source of
 information for everything DMC. I am responsible for:
 
 * Developing new features on both the frontend (using React and Typescript) and
@@ -55,7 +53,7 @@ more...](https://github.com/Anthony-Fiddes/lobster-ice)
 
 * Added Google OAuth2 and various React Components to our web app
 * Tested our Express Server using mocha, chai, and an in-memory MongoDB
- 
+
 Created a portfolio website (as part of the training progrmam) in Java on Google
 App Engine. I wrote all the assets from scratch in plain HTML, CSS, and
 Javascript. The site allows users to create comments, upload images, and
@@ -64,14 +62,14 @@ more...](https://github.com/Anthony-Fiddes/step-portfolio)
 
 <h2 style="margin-bottom: 0">Google, Chicago | Engineering Practicum Intern</h2>
 
-May 2019 - August 2019 
+May 2019 - August 2019
 
 Created a production quality Dagger dependency analysis tool in Java with a
 small team for use by all of Google Search.
 
 * Required knowledge of Google’s internal development tools.
 * Left a design doc for my successors to improve the tool.
- 
+
 Served as part of Google's Computer Science Summer Institute. CSSI is a
 community facing program that introduces underrepresented high school students
 to software engineering.
