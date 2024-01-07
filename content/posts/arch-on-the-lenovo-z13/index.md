@@ -1,5 +1,7 @@
 ---
 title: "Running Linux on my Thinkpad Z13 Part 2: Arch"
+summary: "I distro hopped to Arch because I was curious about the rolling
+release experience."
 date: 2023-12-09T19:17:19-07:00
 draft: false
 ---
@@ -7,7 +9,7 @@ draft: false
 I really enjoyed pop_os! on my Z13, but I was experiencing some issues when
 docking the laptop with multiple monitors (frequent crashes, hang-ups). I was
 also just curious about using an Arch based distro and an updated version of
-Gnome, so I installed Endeavour OS. 
+Gnome, so I installed Endeavour OS.
 
 I've had to make enough adjustments that I think another post is warranted.
 
@@ -155,9 +157,9 @@ service you may be running on your LAN), I had to:
    and assign my network to the "home" zone, where mDNS is enabled by default. I
    figured this out while browsing [this Endeavour OS wiki
    page](https://discovery.endeavouros.com/applications/firewalld/).
-   
+
    Example:
-   
+
    ![firewall application example](./firewall_screenshot.png)
 
 2. Enable a daemon that provides mDNS. I used Avahi, so I followed the
@@ -179,7 +181,7 @@ and forth in history.
 
 ```bash
 --gtk-version=4
---ozone-platform-hint=auto 
+--ozone-platform-hint=auto
 --enable-features=TouchpadOverscrollHistoryNavigation
 --ozone-platform=wayland
 ```

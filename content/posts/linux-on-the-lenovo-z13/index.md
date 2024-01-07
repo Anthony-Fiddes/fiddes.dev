@@ -1,5 +1,6 @@
 ---
 title: "Running Linux on my Thinkpad Z13"
+summary: "I installed pop_os! on my Thinkpad Z13 and documented the process."
 date: 2023-07-24T21:15:19-07:00
 draft: false
 ---
@@ -36,11 +37,11 @@ download Lenovo's janky-but-functional tool [here](https://pcsupport.lenovo.com/
 ## Sleep Issues
 
 > 2023-09-17 Update:
-> 
+>
 > I didn't change anything, but I've noticed that wake from
 > sleep times have substantially improved (from a noticeable couple of seconds to
 > near instant upon opening the lid).
-> 
+>
 > I experimented further by removing the modprobe line from the following sleep
 > script and I noticed that it's no longer needed for my Wi-Fi to be performant
 > after sleep. I assume this came for free with some kernel/system updates, but
@@ -55,7 +56,7 @@ what ultimately ended up working for me:
 
 ```bash
 #!/bin/sh
-# save to /lib/systemd/system-sleep/ 
+# save to /lib/systemd/system-sleep/
 
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
 
@@ -98,7 +99,7 @@ You'll see this screen:
 
 You want to enable fingerprint authentication. After doing that I was able to
 set up my fingerprints in the settings app and use it to auth sudo and
-login. 
+login.
 
 The only problem I've noticed is that if I use my fingerprint for my first
 login after powering on my device, I have to type in my password anyways when I
