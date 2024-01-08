@@ -195,3 +195,10 @@ only downside I've noticed.
 
 [^brave_flags]: The Chromium page of the Arch wiki was extremely helpful here:
 https://wiki.archlinux.org/title/Chromium
+
+### Laggy Touchpad
+
+I found that sometimes my touchpad would be extremely laggy. Messing around
+with this, it seems to be significantly worse if I turned on my laptop while
+connected to power. If I disconnect my AC adapter and reboot, the touchpad
+functions a lot better. I have no clue why this happens and I can offer no fix.
