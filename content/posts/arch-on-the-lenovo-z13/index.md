@@ -94,7 +94,7 @@ instead edited `/etc/pam.d/system-auth` like so:
 auth       required                    pam_faillock.so      preauth deny=10
 # Optionally use requisite above if you do not want to prompt for the password
 # on locked accounts.
--auth      [success=3 default=ignore]  pam_systemd_home.so  try_first_pass nullok likeauth
+-auth      [success=3 default=ignore]  pam_systemd_home.so
 auth       [success=2 default=ignore]  pam_unix.so          try_first_pass nullok likeauth
 auth       [success=1 default=bad]     pam_fprintd.so
 auth       [default=die]               pam_faillock.so      authfail
