@@ -191,7 +191,8 @@ and forth in history.
 ```
 
 The ozone-platform setting makes the title bar weirdly smaller, but that's the
-only downside I've noticed.
+only downside I've noticed. Ultimately, I switched back to Firefox (specifically
+Librefox) since it worked well with Wayland out of the box.
 
 [^brave_flags]: The Chromium page of the Arch wiki was extremely helpful here:
 https://wiki.archlinux.org/title/Chromium
