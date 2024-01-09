@@ -5,6 +5,7 @@ release experience."
 description: "I distro hopped to Arch because I was curious about the rolling
 release experience."
 date: 2023-12-09T19:17:19-07:00
+lastmod: 2024-01-09
 draft: false
 ---
 
