@@ -3,6 +3,7 @@ title: "Running Linux on my Thinkpad Z13"
 summary: "I installed pop_os! on my Thinkpad Z13 and documented the process."
 description: "I installed pop_os! on my Thinkpad Z13 and documented the process."
 date: 2023-07-24T21:15:19-07:00
+lastmod: 2023-09-17
 draft: false
 ---
 
