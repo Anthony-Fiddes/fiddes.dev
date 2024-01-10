@@ -5,7 +5,7 @@ release experience."
 description: "I distro hopped to Arch because I was curious about the rolling
 release experience."
 date: 2023-12-09T19:17:19-07:00
-lastmod: 2024-01-09
+lastmod: 2024-01-10
 draft: false
 ---
 
@@ -142,6 +142,20 @@ another symptom of triggering the lockout. I ended up installing seahorse (`yay
 and then it's set back to my LUKS password. Not sure how to change this but I don't
 mind it I guess.
 
+## Laggy Touchpad
+
+I find that sometimes my touchpad is extremely laggy, and it seems significantly
+worse when I turn on my laptop while connected to power. If I disconnect my AC
+adapter and reboot, the touchpad returns to normal.
+
+Skimming the internet, it seems like it could be because I'm using a cheap USB-C
+charger I bought in another country. I also noticed the problem in Windows when I went to
+check if the problem was due to a missing firmware update (there were some
+updates available, but they didn't fix the issue).
+
+I don't really have a ton of insight for this one, I'll just go back to using my
+good chargers when I get back home ¯\_(ツ)_/¯
+
 ## Misc
 
 ### auto-cpufreq
@@ -197,10 +211,3 @@ Librefox) since it worked well with Wayland out of the box.
 
 [^brave_flags]: The Chromium page of the Arch wiki was extremely helpful here:
 https://wiki.archlinux.org/title/Chromium
-
-### Laggy Touchpad
-
-I found that sometimes my touchpad would be extremely laggy. Messing around
-with this, it seems to be significantly worse if I turned on my laptop while
-connected to power. If I disconnect my AC adapter and reboot, the touchpad
-functions a lot better. I have no clue why this happens and I can offer no fix.
