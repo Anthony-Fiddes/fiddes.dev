@@ -29,15 +29,16 @@ I copied this script:
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
 
 case "$1" in
-	#code execution BEFORE sleeping/hibernating/suspending
+	# code execution BEFORE sleeping/hibernating/suspending
 	pre)
-		echo "Turning off Wi-Fi"
-		rfkill block wlan
 	;;
-	#code execution AFTER resuming
+	# code execution AFTER resuming
+	# Idea from the following blog post:
+	# https://null.rip/2022/09/linux-on-the-thinkpad-z13-all-amd-almost-there/
 	post)
-		echo "Turning Wi-Fi back on"
-		rfkill unblock wlan
+		echo "Toggling wlan twice"
+		rfkill toggle wlan
+		rfkill toggle wlan
 	;;
 esac
 
@@ -211,3 +212,8 @@ Librefox) since it worked well with Wayland out of the box.
 
 [^brave_flags]: The Chromium page of the Arch wiki was extremely helpful here:
 https://wiki.archlinux.org/title/Chromium
+
+
+### Secure Boot
+
+I finally set up secure boot. It was easy to follow the arch wiki.
