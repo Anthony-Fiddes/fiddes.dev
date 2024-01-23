@@ -5,7 +5,7 @@ release experience."
 description: "I distro hopped to Arch because I was curious about the rolling
 release experience."
 date: 2023-12-09T19:17:19-07:00
-lastmod: 2024-01-10
+lastmod: 2024-01-22
 draft: false
 ---
 
@@ -15,6 +15,31 @@ also just curious about using an Arch based distro and an updated version of
 Gnome, so I installed Endeavour OS.
 
 I've had to make enough adjustments that I think another post is warranted.
+
+## Battery
+
+While battery life was okay with just `power-profiles-daemon` (included with Gnome
+by default), it didn't seem to be quite as great as I thought it could be when
+doing low power tasks like basic text editing in the terminal. Because of that,
+I uninstalled it and installed tlp like so:
+
+```bash
+# Useful guide: https://linrunner.de/tlp/faq/ppd.html
+yay -R power-profiles-daemon
+yay -S tlp
+sudo sed -i "s/#\?PLATFORM_PROFILE_ON_AC=.*/PLATFORM_PROFILE_ON_AC=performance/1" /etc/tlp.conf
+sudo sed -i "s/#\?PLATFORM_PROFILE_ON_BAT=.*/PLATFORM_PROFILE_ON_BAT=low-power/1" /etc/tlp.conf
+systemctl enable tlp.service
+systemctl mask systemd-rfkill.service systemd-rfkill.socket
+echo "Run sudo tlp start or restart"
+```
+
+If you're on the Z13, then the platform profiles should work fine for you, but
+if not you can run `sudo tlp-stat -p` to see what your options are.
+
+Anyways after these changes I'm seeing a drastically improved battery life for
+low-powered tasks (5-6 hour estimates became 8-10 hour estimates when around
+75-85%). This seems more in line with what I was getting on pop_os!.
 
 ## Sleep Issues
 
@@ -47,8 +72,12 @@ exit 0
 
 to `/usr/lib/systemd/system-sleep/`[^3]. You can name it whatever you like, it just has
 to be executable. I figured deleting the module like I posted
-before was overkill since the problem was also solved by just toggling the Wi-Fi
+before was overkill since the problem is also solved by just toggling the Wi-Fi
 on and off.
+
+Despite adding this script and confirming that it runs on resuming from sleep, I
+still notice the internet speed slowing from time to time. Turning the wlan
+on and off manually fixes it, it's just annoying!
 
 [^3]: The [Arch
 Wiki](https://wiki.archlinux.org/title/Power_management#Hooks_in_/usr/lib/systemd/system-sleep)
@@ -163,10 +192,7 @@ good chargers when I get back home ¯\_(ツ)_/¯
 
 This post[^2] mentioned using auto-cpufreq, but it didn't work for me. For some
 reason when I had it enabled the trackpoint would register random right clicks
-when the laptop was docked. I'm just using Gnome power profiles now and battery
-life is great on Power Saver (e.g. as I write this at 86% I have an estimated 8 hours
-left with the keyboard backlight on low, 27 tabs open in brave and 4 tabs open
-in Kitty).
+when the laptop was docked.
 
 ### mDNS
 
