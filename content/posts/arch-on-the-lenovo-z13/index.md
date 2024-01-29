@@ -5,7 +5,7 @@ release experience."
 description: "I distro hopped to Arch because I was curious about the rolling
 release experience."
 date: 2023-12-09T19:17:19-07:00
-lastmod: 2024-01-22
+lastmod: 2024-01-28
 draft: false
 ---
 
@@ -43,7 +43,28 @@ low-powered tasks (5-6 hour estimates became 8-10 hour estimates when around
 
 ## Sleep Issues
 
-The issue where the WiFi speeds dip dramatically after sleep is back. My fix
+The biggest sleep issue I had was that sometimes the laptop just wouldn't wake
+up or go to sleep properly. E.g. one time I had an experience that resembled a
+common issue found on Windows laptops with Modern Standby. I closed the lid and
+put the laptop in its case, only to return and find a hot laptop with an
+unresponsive black screen that I had to force shutdown. This was pretty rare and
+I didn't notice any obviously actionable logs in journalctl, but it didn't feel
+great. It seemed to be exacerbated when docking/undocking the laptop, but I
+never figured out a root cause.
+
+Fortunately, the troubleshooting section of the relevant arch wiki page
+[^sleepissues] gives downgrading to the LTS kernel as an unofficial solution,
+and it seems to be working for me. All I had to do was run `yay -S linux-lts` to
+install the LTS latest kernel, and it was automatically added as the top option
+of my systemd-boot menu.
+
+[^sleepissues]: There were loads of troubleshooting techniques that were too
+advanced for me, so that's why I figured I'd give the LTS kernel a shot first:
+https://wiki.archlinux.org/title/Power_management/Suspend_and_hibernate#Suspend/hibernate_does_not_work,_or_does_not_work_consistently
+
+### Wi-Fi Slowdown
+
+The issue where the WiFi speeds dip dramatically after sleep also returned. My fix
 this time around is very similar to the last one I posted.
 
 I copied this script:
@@ -74,6 +95,9 @@ to `/usr/lib/systemd/system-sleep/`[^3]. You can name it whatever you like, it j
 to be executable. I figured deleting the module like I posted
 before was overkill since the problem is also solved by just toggling the Wi-Fi
 on and off.
+
+<!-- The LTS kernel may have improved this. I should watch and see how often it
+happens now. -->
 
 Despite adding this script and confirming that it runs on resuming from sleep, I
 still notice the internet speed slowing from time to time. Turning the wlan
