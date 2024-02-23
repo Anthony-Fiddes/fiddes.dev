@@ -62,6 +62,21 @@ of my systemd-boot menu.
 advanced for me, so that's why I figured I'd give the LTS kernel a shot first:
 https://wiki.archlinux.org/title/Power_management/Suspend_and_hibernate#Suspend/hibernate_does_not_work,_or_does_not_work_consistently
 
+I also found that suspending while connected to my Thunderbolt dock was buggy.
+Only one of my two connected monitors would come back on, and there was always the chance
+that all of my screens would go dark.
+
+To fix that, I disabled USB autosuspend for the dock using TLP like so:
+
+```bash
+sudo sed -i "s/#\?USB_DENYLIST=\".*\"/USB_DENYLIST=\"050d:006d\"/1" /etc/tlp.conf
+```
+
+Of course you would replace the id with whatever the ID of your dock is. You can
+find device IDs using `lsusb` or `tlp-stat -u`. The line for my dock looked like
+this: `Bus 009 Device 006 ID 050d:006d control = on,   autosuspend_delay_ms =
+2000 -- Belkin Components Belkin Pro Thunderbolt 4 Dock (no driver)`
+
 ### Wi-Fi Slowdown
 
 The issue where the WiFi speeds dip dramatically after sleep also returned. My fix
