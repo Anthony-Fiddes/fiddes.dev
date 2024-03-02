@@ -262,8 +262,3 @@ Librefox) since it worked well with Wayland out of the box.
 
 [^brave_flags]: The Chromium page of the Arch wiki was extremely helpful here:
 https://wiki.archlinux.org/title/Chromium
-
-
-### Secure Boot
-
-I finally set up secure boot. It was easy to follow the arch wiki.
