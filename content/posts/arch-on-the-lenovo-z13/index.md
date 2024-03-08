@@ -147,7 +147,7 @@ instead edited `/etc/pam.d/system-auth` like so:
 
 # deny=10 because the default of 3 is constantly getting me locked out
 auth       required                    pam_faillock.so      preauth deny=10
-# the next 3 lines are the change. If pam_unix receives nothing, we try
+# the next 3 lines are the main change. If pam_unix receives nothing, we try
 # fingerprint auth.
 -auth      [success=3 default=ignore]  pam_systemd_home.so
 auth       [success=2 default=ignore]  pam_unix.so          try_first_pass nullok likeauth
