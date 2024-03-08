@@ -147,8 +147,8 @@ instead edited `/etc/pam.d/system-auth` like so:
 
 # deny=10 because the default of 3 is constantly getting me locked out
 auth       required                    pam_faillock.so      preauth deny=10
-# Optionally use requisite above if you do not want to prompt for the password
-# on locked accounts.
+# the next 3 lines are the change. If pam_unix receives nothing, we try
+# fingerprint auth.
 -auth      [success=3 default=ignore]  pam_systemd_home.so
 auth       [success=2 default=ignore]  pam_unix.so          try_first_pass nullok likeauth
 auth       [success=1 default=bad]     pam_fprintd.so
@@ -156,22 +156,8 @@ auth       [default=die]               pam_faillock.so      authfail
 auth       optional                    pam_permit.so
 auth       required                    pam_env.so
 auth       required                    pam_faillock.so      authsucc
-# If you drop the above call to pam_faillock.so the lock will be done also
-# on non-consecutive authentication failures.
 
--account   [success=1 default=ignore]  pam_systemd_home.so
-account    required                    pam_unix.so
-account    optional                    pam_permit.so
-account    required                    pam_time.so
-
--password  [success=1 default=ignore]  pam_systemd_home.so
-password   required                    pam_unix.so          try_first_pass nullok shadow
-password   optional                    pam_permit.so
-
--session   optional                    pam_systemd_home.so
-session    required                    pam_limits.so
-session    required                    pam_unix.so
-session    optional                    pam_permit.so
+# The rest of the file was left unchanged
 ```
 
 As you can see, rather than try to auth with the fingerprint first, we first try
