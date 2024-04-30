@@ -16,8 +16,10 @@ May 2022, 3.8 GPA, [Degree](./diploma.pdf)
 
 June 2022 - Now
 
-Returned to the Data Mesh Catalog (DMC) team to become the authoritative source of
-information for everything DMC. I am responsible for:
+Returned to the Data Mesh Catalog (DMC) team improve data searchability at Snap.
+This meant making it easier to find and reuse useful data stored in different
+media (e.g. BigQuery tables, GCS buckets, Looker dashboards, etc.). I am
+responsible for:
 
 * Developing new features on both the frontend (using React and Typescript) and
 the backend (using Java, Python, and SQL).
