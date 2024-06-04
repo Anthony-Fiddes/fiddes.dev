@@ -21,8 +21,10 @@ This meant making it easier to find and reuse useful data stored in different
 media (e.g. BigQuery tables, GCS buckets, Looker dashboards, etc.). I am
 responsible for:
 
-* Developing new features on both the frontend (using React and Typescript) and
-the backend (using Java, Python, and SQL).
+* Using React and Typescript to maintain an SPA that allows users to search for
+data to see how often it’s being used and where.
+* Developing the Java backend for the above service to provide data from
+BigQuery, Spanner, and Hbase datastores (primarily querying using SQL).
 * Creating pipelines to catalog metadata, primarily using Apache Airflow,
 BigQuery, and Spanner.
 * Maintaining and monitoring our services using Grafana, Kubernetes, Docker,
@@ -34,7 +36,8 @@ Our team is also spearheading the effort to make BigQuery a tier 1 service at
 Snap. This means that we:
 * Save millions of dollars per year by identifying unused resources for
 deletion.
-* Monitor query cost and performance with Grafana dashboards.
+* Monitor query cost and performance with Grafana dashboards to maintain a high
+quality of service.
 
 
 <h2 style="margin-bottom: 0">Snap Inc., Remote | Software Engineering Intern</h2>
