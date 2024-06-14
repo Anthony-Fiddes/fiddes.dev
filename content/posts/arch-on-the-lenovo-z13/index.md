@@ -58,9 +58,10 @@ and it seems to be working for me. All I had to do was run `yay -S linux-lts` to
 install the LTS latest kernel, and it was automatically added as the top option
 of my systemd-boot menu.
 
-[^sleepissues]: There were loads of troubleshooting techniques that were too
-advanced for me, so that's why I figured I'd give the LTS kernel a shot first:
-https://wiki.archlinux.org/title/Power_management/Suspend_and_hibernate#Suspend/hibernate_does_not_work,_or_does_not_work_consistently
+[^sleepissues]:
+    There were loads of troubleshooting techniques that were too
+    advanced for me, so that's why I figured I'd give the LTS kernel a shot first:
+    https://wiki.archlinux.org/title/Power_management/Suspend_and_hibernate#Suspend/hibernate_does_not_work,_or_does_not_work_consistently
 
 ### Wi-Fi Slowdown
 
@@ -103,13 +104,14 @@ Despite adding this script and confirming that it runs on resuming from sleep, I
 still notice the internet speed slowing from time to time. Turning the wlan
 on and off manually fixes it, it's just annoying!
 
-[^3]: The [Arch
-Wiki](https://wiki.archlinux.org/title/Power_management#Hooks_in_/usr/lib/systemd/system-sleep)
-says to use `/usr/lib/systemd/system-sleep/`, but this
-[AskUbuntu](https://askubuntu.com/questions/1313479/correct-way-to-execute-a-script-on-resume-from-suspend)
-post used `/lib/systemd/system-sleep`. Since I'm using Arch I'm going with the
-Arch wiki, but it seems like either would work (and I definitely used the
-AskUbuntu way on pop_os!).
+[^3]:
+    The [Arch
+    Wiki](https://wiki.archlinux.org/title/Power_management#Hooks_in_/usr/lib/systemd/system-sleep)
+    says to use `/usr/lib/systemd/system-sleep/`, but this
+    [AskUbuntu](https://askubuntu.com/questions/1313479/correct-way-to-execute-a-script-on-resume-from-suspend)
+    post used `/lib/systemd/system-sleep`. Since I'm using Arch I'm going with the
+    Arch wiki, but it seems like either would work (and I definitely used the
+    AskUbuntu way on pop_os!).
 
 ## Fingerprint Sensor
 
@@ -194,7 +196,7 @@ check if the problem was due to a missing firmware update (there were some
 updates available, but they didn't fix the issue).
 
 I don't really have a ton of insight for this one, I'll just go back to using my
-good chargers when I get back home ¯\_(ツ)_/¯
+good chargers when I get back home ¯\_(ツ)\_/¯
 
 ## Misc
 
@@ -224,8 +226,9 @@ service you may be running on your LAN), I had to:
    [here](https://wiki.archlinux.org/title/Systemd-resolved#mDNS) (it just
    seemed like more work).
 
-[^2]: One of the most helpful posts I looked at:
-[https://blog.15cm.net/2022/08/21/my_arch_linux_setup_on_thinkpad_z13_gen_1/](https://blog.15cm.net/2022/08/21/my_arch_linux_setup_on_thinkpad_z13_gen_1/)
+[^2]:
+    One of the most helpful posts I looked at:
+    [https://blog.15cm.net/2022/08/21/my_arch_linux_setup_on_thinkpad_z13_gen_1/](https://blog.15cm.net/2022/08/21/my_arch_linux_setup_on_thinkpad_z13_gen_1/)
 
 ### Brave & Wayland
 
@@ -246,5 +249,6 @@ The ozone-platform setting makes the title bar weirdly smaller, but that's the
 only downside I've noticed. Ultimately, I switched back to Firefox (specifically
 Librefox) since it worked well with Wayland out of the box.
 
-[^brave_flags]: The Chromium page of the Arch wiki was extremely helpful here:
-https://wiki.archlinux.org/title/Chromium
+[^brave_flags]:
+    The Chromium page of the Arch wiki was extremely helpful here:
+    https://wiki.archlinux.org/title/Chromium

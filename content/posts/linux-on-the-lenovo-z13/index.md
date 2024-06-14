@@ -26,8 +26,9 @@ before doing anything else with apt on a clean install.
 Then you'll want to install the Z13 package included on Lenovo's Ubuntu
 image[^1]:
 
-[^1]: Learned this while reading Martin's great review
-[here](https://wimpysworld.com/posts/why-i-chose-the-thinkpad-z13-as-my-linux-laptop/)
+[^1]:
+    Learned this while reading Martin's great review
+    [here](https://wimpysworld.com/posts/why-i-chose-the-thinkpad-z13-as-my-linux-laptop/)
 
 ```bash
 sudo apt install oem-sutton.newell-abe-meta
